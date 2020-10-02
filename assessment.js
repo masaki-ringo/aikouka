@@ -35,12 +35,12 @@ assessmentButton.onclick = () => {
     removeAllChildren(tweetDivided);
   const anchor = document.createElement('a');
   const hrefValue =
-  'https://twitter.com/intent/tweet?button_hashtag='+encodeURIComponent('あなたのいいところ') +'&ref_src=twsrc%5Etfw';
+  'https://twitter.com/intent/tweet?button_hashtag='+encodeURIComponent('愛好家の一曲') +'&ref_src=twsrc%5Etfw';
 
   anchor.setAttribute('href',hrefValue);
   anchor.className = 'twitter-hashtag-button';
   anchor.setAttribute('data-text',result);
-  anchor.innerText = 'Tweet #あなたのいいところ診断';
+  anchor.innerText = 'Tweet #愛好家の一曲';
 
   tweetDivided.appendChild(anchor);
 
