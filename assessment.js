@@ -33,18 +33,20 @@ assessmentButton.onclick = () => {
     resultDivided.appendChild(paragraph);
     //TODO ツイート機能の作成
     removeAllChildren(tweetDivided);
-    const anchor = document.createElement('a');
-    const hrefValue = 'https://twitter.com/intent/tweet?button_hashtag=' + encodeURIComponent('愛好家の一曲') + '&ref_src=twsrc%5Etfw';
+  const anchor = document.createElement('a');
+  const hrefValue =
+  'https://twitter.com/intent/tweet?button_hashtag='+encodeURIComponent('あなたのいいところ') +'&ref_src=twsrc%5Etfw';
 
-    anchor.setAttribute('href', hrefValue);
-    anchor.className = 'twitter-hashtag-button';
-    anchor.setAttribute('data-text', result);
-    anchor.innerText = 'Tweet #愛好家の一曲';
-    tweetDivided.appendChild(anchor);
+  anchor.setAttribute('href',hrefValue);
+  anchor.className = 'twitter-hashtag-button';
+  anchor.setAttribute('data-text',result);
+  anchor.innerText = 'Tweet #あなたのいいところ診断';
 
-    const script = document.createElement('script');
-    script.setAttribute('src', 'http://platform.twitter.com/widgets.js');
-    tweetDivided.appendChild(script);
+  tweetDivided.appendChild(anchor);
+
+  const script = document.createElement('script');
+script.setAttribute('src', 'https://platform.twitter.com/widgets.js');
+tweetDivided.appendChild(script);
 };
 userNameInput.onkeydown = (event) => {
     if(event.key === 'Enter'){
